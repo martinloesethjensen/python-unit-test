@@ -1,4 +1,5 @@
 import unittest
+
 from calculator import *
 
 
@@ -19,6 +20,12 @@ class TestCalculator(unittest.TestCase):
 
         calc.multiply(5)
         self.assertEqual(calc.total, 25)
+
+    def test_should_not_divide_by_zero(self):
+        calc = Calculater()
+        calc.total = 50
+
+        self.assertRaises(ZeroDivisionError, calc.divide, 0)
 
     def test_type(self):
         calc = Calculater()

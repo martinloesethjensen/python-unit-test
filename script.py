@@ -4,8 +4,6 @@ from calculator import Calculater
 def main():
     calc = Calculater()
 
-    calc.check_type(type(True))
-
     while True:
 
         inp = input(calc)

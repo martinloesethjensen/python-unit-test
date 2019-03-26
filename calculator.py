@@ -39,6 +39,8 @@ class Calculater:
 
     def divide(self, num):
         if Calculater.check_int_or_float(num):
+            if num == 0:
+                raise ZeroDivisionError("You can not divide by zero.")
             self.total /= num
 
         else:
